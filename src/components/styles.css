@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .card-image {
     width: 100px;
     height: auto;
@@ -27,6 +29,6 @@
     font-size: 16px;
     padding: 8px 10px;
     color: white;
-    font-family: roboto;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
   }
