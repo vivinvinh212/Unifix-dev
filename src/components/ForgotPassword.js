@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link } from "react-router-dom"
+import "./theme.css"
 
 export default function ForgotPassword() {
   const emailRef = useRef()
@@ -28,28 +29,35 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Password Reset</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          {message && <Alert variant="success">{message}</Alert>}
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
-              <i></i>
-            </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Reset Password
-            </Button>
-          </Form>
-          <div className="w-100 text-center mt-3">
-            <Link to="/login">Login</Link>
-          </div>
-        </Card.Body>
-      </Card>
-      <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+      <div className="forgot-password">
+        <h2 className="text-center mb-4" style={{fontWeight: "var(--header-weight)", fontSize: "var(--header-size)"}}>Password Reset</h2>
+        {error && <Alert variant="danger">{error}</Alert>}
+        {message && <Alert variant="success">{message}</Alert>}
+        <Form onSubmit={handleSubmit}>
+          <Form.Group id="email">
+            <Form.Control className="email-info" type="email" placeholder="Enter your email" ref={emailRef} required />
+          </Form.Group>
+            <div className="container-below-input d-flex justify-content-between">
+                <div className="d-flex justify-content-start">
+                    <Link to="/login" style={{color: "var(--color-theme)"}}>Login</Link>
+                </div>
+                <div className="d-flex justify-content-end">
+                    Need an account?&nbsp; <Link to="/signup" style={{color: "var(--color-theme)"}}>Sign Up</Link>
+                </div>
+            </div>
+            <Button disabled={loading} className="w-100" type="submit"
+                  style={{
+                      borderRadius: "var(--button-borderRadius)",
+                      borderStyle: "var(--button-borderStyle)",
+                      margin: "var(--button-margin)",
+                      width: "var(--button-width)",
+                      fontSize: "var(--button-fontSize)",
+                      fontWeight: "var(--button-fontWeight)",
+                      backgroundColor: "var(--button-backgroundColor)",
+                      fontFamily: "var(--font-family)"}}>
+            Reset Password
+          </Button>
+        </Form>
       </div>
     </>
   )

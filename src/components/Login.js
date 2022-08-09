@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react"
 import {Form, Button, Card, Alert, FormGroup, InputGroup, FormControl} from "react-bootstrap"
-import { useAuth } from "../../contexts/AuthContext"
+import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom";
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
-import "../../icon/themify-icons/themify-icons.css";
-import "./login.css"
+import "../icon/themify-icons/themify-icons.css";
+import "./theme.css"
 
 export default function Login() {
   const emailRef = useRef()
@@ -51,7 +51,7 @@ export default function Login() {
   return (
     <>
       <div id="login-page">
-          <h2 className="text-center mb-4" style={{fontWeight: "700", fontSize: "80px"}}>Sign in</h2>
+          <h2 className="text-center mb-4" style={{fontWeight: "var(--header-weight)", fontSize: "var(--header-size)"}}>Sign in</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email" style={{paddingBottom: "10px"}}>
@@ -68,15 +68,16 @@ export default function Login() {
                       <Link to="/signup" style={{color: "var(--color-theme)"}}>Sign Up</Link>
                   </div>
               </div>
-              <Button disabled={loading} className="w-200 d-flex justify-content-center" type="submit"
+              <Button disabled={loading} className="w-100" type="submit"
                     style={{
-                        borderRadius: "16px",
-                        borderStyle: "none",
-                        margin: "auto",
-                        width: "185px",
-                        fontSize: "22px",
-                        fontWeight: "700",
-                        backgroundColor: "var(--color-theme)"}}>
+                        borderRadius: "var(--button-borderRadius)",
+                        borderStyle: "var(--button-borderStyle)",
+                        margin: "var(--button-margin)",
+                        width: "var(--button-width)",
+                        fontSize: "var(--button-fontSize)",
+                        fontWeight: "var(--button-fontWeight)",
+                        backgroundColor: "var(--button-backgroundColor)",
+                        fontFamily: "var(--font-family)"}}>
               Sign in
             </Button>
           </Form>
@@ -86,10 +87,10 @@ export default function Login() {
       </div>
 
       <div style={{marginTop: "1rem", marginBottom: "1rem"}}>
-        <FacebookLoginButton onClick={facebookHandle} className="d-flex justify-content-center" style={{borderRadius: "16px"}}/>
+        <FacebookLoginButton onClick={facebookHandle} className="d-flex justify-content-center" style={{borderRadius: "16px", fontFamily: "var(--font-family)"}}/>
       </div>
       <div style={{marginTop: "1rem", marginBottom: "1rem"}}>
-        <GoogleLoginButton onClick={googleHandle} className="d-flex justify-content-center" style={{borderRadius: "16px"}} />
+        <GoogleLoginButton onClick={googleHandle} className="d-flex justify-content-center" style={{borderRadius: "16px", fontFamily: "var(--font-family)"}} />
       </div>
     </>
   )
