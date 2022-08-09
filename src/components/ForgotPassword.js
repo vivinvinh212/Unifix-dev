@@ -39,10 +39,10 @@ export default function ForgotPassword() {
           </Form.Group>
             <div className="container-below-input d-flex justify-content-between">
                 <div className="d-flex justify-content-start">
-                    <Link to="/login" style={{color: "var(--color-theme)"}}>Login</Link>
+                    <Link to="/login" style={{color: "var(--color-theme)"}}>Sign in</Link>
                 </div>
                 <div className="d-flex justify-content-end">
-                    Need an account?&nbsp; <Link to="/signup" style={{color: "var(--color-theme)"}}>Sign Up</Link>
+                    Need an account?&nbsp; <Link to="/signup" style={{color: "var(--color-theme)"}}>Sign up</Link>
                 </div>
             </div>
             <Button disabled={loading} className="w-100" type="submit"

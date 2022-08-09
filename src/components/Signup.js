@@ -61,7 +61,7 @@ export default function Signup() {
         </Button>
       </Form>
       <div className="w-100 text-center mt-2" style={{paddingTop: "10px"}}>
-        Already have an account? <Link to="/login" style={{color: "var(--color-theme)"}}>Log In</Link>
+        Already have an account? <Link to="/login" style={{color: "var(--color-theme)"}}>Sign in</Link>
       </div>
     </div>
     </>
