@@ -1,15 +1,15 @@
 import React from "react"
-import Signup from "./Signup"
 import { Container } from "react-bootstrap"
 import { AuthProvider } from "../contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Dashboard from "./Dashboard"
-import Login from "./Login"
-import PrivateRoute from "./PrivateRoute"
-import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
-import picture from "../img/Frame.png"
 import logo from "../img/logo.png";
+import PrivateRoute from "./PrivateRoute";
+import Dashboard from "./Dashboard";
+import Signup from "./login-page/Signup";
+import Login from "./login-page/Login";
+import ForgotPassword from "./login-page/ForgotPassword";
+import picture from "../img/Frame.png";
 
 function App() {
   return (
@@ -23,16 +23,16 @@ function App() {
           <Router>
             <AuthProvider>
               <Switch>
-                <PrivateRoute exact path="/" component={Dashboard} />
-                <PrivateRoute path="/update-profile" component={UpdateProfile} />
-                <Route path="/signup" component={Signup} />
-                <Route path="/login" component={Login} />
-                <Route path="/forgot-password" component={ForgotPassword} />
+                  <PrivateRoute exact path="/" component={Dashboard} />
+                  <Route path="/signup" component={Signup} />
+                  <Route path="/login" component={Login} />
+                  <Route path="/forgot-password" component={ForgotPassword} />
+                  <Route path="/update-profile" component={UpdateProfile} />
               </Switch>
             </AuthProvider>
           </Router>
         </div>
-        <div className="justify-content-right" ><img src={picture} alt="" style={{width: "700x"}}/></div>
+          <div className="justify-content-right" ><img src={picture} alt="" style={{width: "700x"}}/></div>
       </Container>
     </Container>
   )

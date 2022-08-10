@@ -2,6 +2,7 @@
 
 :root {
     --color-theme: #22BAEC;
+    --color-txt: #0AB5FF;
     --font-family: 'Poppins', sans-serif;
     /*header config*/
     --header-weight: 700;
@@ -16,12 +17,17 @@
     --button-backgroundColor: var(--color-theme);
 }
 
-#email .email-info, #password .password-info, #password-confirm .password-confirm-info {
+#email .email-info, #password .password-info, #password-confirm .password-confirm-info, #name .info, #dob .info {
     font-family: 'Poppins', sans-serif;
     min-height: 70px;
     color: #787885;
     border-color: #D9D9D9;
     border-radius: 16px;
+}
+
+#name .required:after, #dob .required:after {
+    content:"*";
+    color:red;
 }
 
 .container-below-input {

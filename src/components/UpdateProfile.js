@@ -43,44 +43,58 @@ export default function UpdateProfile() {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
+      <div>
+          <h2 className="text-center mb-4" style={{fontWeight: "var(--header-weight)", fontSize: "40px"}}>Welcome to Unifix!</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
+            <Form.Group id="name">
+              <Form.Label className="required" style={{color: "var(--color-txt)", fontFamily: "var(--font-family)"}}>First name</Form.Label>
+              <Form.Control className="info"
+                type="name"
                 ref={emailRef}
                 required
-                defaultValue={currentUser.email}
+                /*defaultValue={currentUser.email}*/
               />
             </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
+            <Form.Group id="name">
+              <Form.Label style={{color: "var(--color-txt)", fontFamily: "var(--font-family)"}}>Middle name</Form.Label>
+              <Form.Control className="info"
+                type="name"
                 ref={passwordRef}
-                placeholder="Leave blank to keep the same"
               />
             </Form.Group>
-            <Form.Group id="password-confirm">
-              <Form.Label>Password Confirmation</Form.Label>
-              <Form.Control
-                type="password"
+            <Form.Group id="name">
+              <Form.Label className="required" style={{color: "var(--color-txt)", fontFamily: "var(--font-family)"}}>Last name</Form.Label>
+              <Form.Control className="info"
+                type="name"
                 ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Update
-            </Button>
+            <Form.Group id="dob">
+              <Form.Label className="required" style={{color: "var(--color-txt)", fontFamily: "var(--font-family)"}}>Date of birth</Form.Label>
+              <Form.Control className="info"
+                  type="date"
+                  ref={passwordConfirmRef} style={{paddingTop: "20px", paddingBottom: "20px"}}
+              />
+            </Form.Group>
+            <div className="w-100 text-center">
+              <Button disabled={loading} className="w-50" type="submit"
+                      style={{
+                        borderRadius: "var(--button-borderRadius)",
+                        borderStyle: "var(--button-borderStyle)",
+                        margin: "var(--button-margin)",
+                        width: "var(--button-width)",
+                        fontSize: "var(--button-fontSize)",
+                        fontWeight: "var(--button-fontWeight)",
+                        backgroundColor: "var(--button-backgroundColor)",
+                        fontFamily: "var(--font-family)"}}>
+                Update
+              </Button>
+            </div>
           </Form>
-        </Card.Body>
-      </Card>
+        </div>
       <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
+        <Link to="/" style={{color: "var(--color-theme)"}}>Cancel</Link>
       </div>
     </>
   )

@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react"
 import {Form, Button, Card, Alert, FormGroup, InputGroup, FormControl} from "react-bootstrap"
-import { useAuth } from "../contexts/AuthContext"
+import { useAuth } from "../../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom";
 import { FacebookLoginButton, GoogleLoginButton } from "react-social-login-buttons";
-import "../icon/themify-icons/themify-icons.css";
-import "./theme.css"
+import "../../icon/themify-icons/themify-icons.css";
+import "../theme.css"
 
 export default function Login() {
   const emailRef = useRef()
