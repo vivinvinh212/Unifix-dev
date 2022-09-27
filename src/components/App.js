@@ -13,12 +13,9 @@ import picture from "../img/Frame.png";
 
 function App() {
   return (
-    <Container style={{margin: "0"}}>
-      <div id="header" style={{height: "78px", width: "100%"}}>
-        <img src={logo} alt="" style={{width: "150px", paddingTop: "25px", paddingBottom: "25px", paddingLeft: "25px"}}/>
-      </div>
-      <Container className="d-flex align-items-center justify-content-between"
-                 style={{ minHeight: "90vh", gap: "90px", marginLeft: "100px"}}>
+    <Container>
+      <Container className="d-flex align-items-center justify-content-center"
+                 style={{ minHeight: "100vh" }}>
         <div className="justify-content-left" style={{ minWidth: "432px"}}>
           <Router>
             <AuthProvider>
@@ -32,7 +29,6 @@ function App() {
             </AuthProvider>
           </Router>
         </div>
-          <div className="justify-content-right" ><img src={picture} alt="" style={{width: "700x"}}/></div>
       </Container>
     </Container>
   )

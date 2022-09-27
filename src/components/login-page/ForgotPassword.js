@@ -30,34 +30,46 @@ export default function ForgotPassword() {
   return (
     <>
       <div className="forgot-password">
-        <h2 className="text-center mb-4" style={{fontWeight: "var(--header-weight)", fontSize: "var(--header-size)"}}>Password Reset</h2>
+        <h2 className="text-center" style={{fontWeight: "var(--header-weight)", fontSize: "var(--header-size)", marginBottom:"80px"}}>Thay đổi mật khẩu</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         {message && <Alert variant="success">{message}</Alert>}
-        <Form onSubmit={handleSubmit}>
-          <Form.Group id="email">
-            <Form.Control className="email-info" type="email" placeholder="Enter your email" ref={emailRef} required />
-          </Form.Group>
-            <div className="container-below-input d-flex justify-content-between">
-                <div className="d-flex justify-content-start">
-                    <Link to="/login" style={{color: "var(--color-theme)"}}>Sign in</Link>
-                </div>
-                <div className="d-flex justify-content-end">
-                    Need an account?&nbsp; <Link to="/signup" style={{color: "var(--color-theme)"}}>Sign up</Link>
-                </div>
-            </div>
-            <Button disabled={loading} className="w-100" type="submit"
-                  style={{
-                      borderRadius: "var(--button-borderRadius)",
-                      borderStyle: "var(--button-borderStyle)",
-                      margin: "var(--button-margin)",
-                      width: "var(--button-width)",
-                      fontSize: "var(--button-fontSize)",
-                      fontWeight: "var(--button-fontWeight)",
-                      backgroundColor: "var(--button-backgroundColor)",
-                      fontFamily: "var(--font-family)"}}>
-            Reset Password
-          </Button>
-        </Form>
+        <Card className="d-flex align-items-center"
+              style={{
+                  width:'588px',
+                  height:'330px',
+                  background:"linear-gradient(111.68deg, rgba(255, 255, 255, 0.29) 7.59%, rgba(255, 255, 255, 0.39) 102.04%)",
+                  border: "3px solid rgba(255, 255, 255, 0.28)",
+                  boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2",
+                  backdropFilter:"blur(11px)",
+                  borderRadius:"61px"}}>
+            <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px'}}>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group id="email" style={{paddingBottom: "24px"}}>
+                        <Form.Control className="email-info" type="email" placeholder="Email của bạn" ref={emailRef} required />
+                    </Form.Group>
+                    <Button disabled={loading} className="w-100" type="submit"
+                            style={{
+                                borderRadius: "var(--button-borderRadius)",
+                                borderStyle: "var(--button-borderStyle)",
+                                margin: "var(--button-margin)",
+                                width: "var(--button-width)",
+                                fontSize: "var(--button-fontSize)",
+                                fontWeight: "var(--button-fontWeight)",
+                                backgroundColor: "var(--button-backgroundColor)",
+                                fontFamily: "var(--font-family)"}}>
+                        Đổi mật khẩu
+                    </Button>
+                    <div className="container-below-input d-flex justify-content-between" style={{paddingTop:"30px"}}>
+                        <div className="d-flex justify-content-start">
+                            <Link to="/login" style={{color: "var(--color-theme)"}}>Đăng nhập</Link>
+                        </div>
+                        <div className="d-flex justify-content-end" style={{color: "#A7A7A7"}}>
+                            Thành viên mới?&nbsp; <Link to="/signup" style={{color: "var(--color-theme)"}}>Đăng ký</Link>
+                        </div>
+                    </div>
+                </Form>
+            </Card.Body>
+        </Card>
       </div>
     </>
   )
