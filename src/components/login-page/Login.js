@@ -51,7 +51,11 @@ export default function Login() {
   return (
     <>
       <div id="login-page">
-          <h2 className="text-center mb-4" style={{fontWeight:"var(--header-weight)", fontSize:"var(--header-size)"}}>Đăng nhập</h2>
+          <h2 className="text-center mb-4"
+              style={{
+                  fontWeight:"var(--header-weight)",
+                  fontSize:"var(--header-size)",
+                  marginTop: "var(--header-paddingTop)"}}>Đăng nhập</h2>
           <div className="text-center" style={{marginBottom:"80px"}}>Hãy đăng nhập tài khoản của bạn để tham gia ngay!</div>
           {error && <Alert variant="danger">{error}</Alert>}
           <Card className="d-flex align-items-center"
@@ -60,7 +64,7 @@ export default function Login() {
                     height:'499px',
                     background:"linear-gradient(111.68deg, rgba(255, 255, 255, 0.29) 7.59%, rgba(255, 255, 255, 0.39) 102.04%)",
                     border: "3px solid rgba(255, 255, 255, 0.28)",
-                    boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2",
+                    boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
                     backdropFilter:"blur(11px)",
                     borderRadius:"61px"}}>
               <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px'}}>
@@ -77,6 +81,7 @@ export default function Login() {
                                   borderStyle: "var(--button-borderStyle)",
                                   margin: "var(--button-margin)",
                                   width: "var(--button-width)",
+                                  height: "var(--button-height)",
                                   fontSize: "var(--button-fontSize)",
                                   fontWeight: "var(--button-fontWeight)",
                                   backgroundColor: "var(--button-backgroundColor)",

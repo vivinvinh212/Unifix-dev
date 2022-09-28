@@ -4,19 +4,21 @@ import { AuthProvider } from "../contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import UpdateProfile from "./UpdateProfile"
 import logo from "../img/logo.png";
+import Navbar from "./navigation-bar/Navbar";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "./Dashboard";
 import Signup from "./login-page/Signup";
 import Login from "./login-page/Login";
 import ForgotPassword from "./login-page/ForgotPassword";
 import picture from "../img/Frame.png";
+import Footer from "./footer/Footer";
 
 function App() {
   return (
-    <Container>
-      <Container className="d-flex align-items-center justify-content-center"
-                 style={{ minHeight: "100vh" }}>
-        <div className="justify-content-left" style={{ minWidth: "432px"}}>
+    <div>
+        <div className="navbar p-0"> <Navbar /> </div>
+      <Container className="d-flex align-items-center justify-content-center">
+        <div className="justify-content-left">
           <Router>
             <AuthProvider>
               <Switch>
@@ -30,7 +32,8 @@ function App() {
           </Router>
         </div>
       </Container>
-    </Container>
+        <div className="footer"> <Footer /> </div>
+    </div>
   )
 }
 

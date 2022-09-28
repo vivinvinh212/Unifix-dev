@@ -7,18 +7,23 @@
     /*header config*/
     --header-weight: 700;
     --header-size: 32px;
+    --header-paddingTop: 64px;
     /*button config*/
-    --button-borderRadius: 16px;
+    --button-borderRadius: 50px;
     --button-borderStyle: none;
     --button-margin: 0;
     --button-width: 185px;
+    --button-height: 64px;
     --button-fontSize: 22px;
     --button-fontWeight: 700;
     --button-backgroundColor: var(--color-theme);
 }
 
 #root {
-    background-color: #cae3ee;
+    /*min-height: 2000px;*/
+    /*background-color: #cae3ee;*/
+    background-color: white;
+    background-image: url("../img/11731.jpeg");
 }
 
 .form-control::placeholder{
@@ -28,7 +33,7 @@
 #email .email-info, #password .password-info, #password-confirm .password-confirm-info, #name .info, #dob .info {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
-    min-height: 64px;
+    height: 64px;
     color: #787885;
     border: 1px solid #00BBF9;
     border-radius: 50px;
