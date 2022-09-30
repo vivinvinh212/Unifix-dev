@@ -2,12 +2,13 @@
 
 :root {
     --color-theme: #22BAEC;
-    --color-txt: #0AB5FF;
+    --color-txt: #333333;
     --font-family: 'Poppins', sans-serif;
     /*header config*/
     --header-weight: 700;
     --header-size: 32px;
     --header-paddingTop: 64px;
+    --small-header-size: 14px;
     /*button config*/
     --button-borderRadius: 50px;
     --button-borderStyle: none;
@@ -22,21 +23,65 @@
 #root {
     /*min-height: 2000px;*/
     /*background-color: #cae3ee;*/
-    background-color: white;
-    background-image: url("../img/11731.jpeg");
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-size: 3000px;
 }
 
 .form-control::placeholder{
     color: #CECECE !important;
 }
 
-#email .email-info, #password .password-info, #password-confirm .password-confirm-info, #name .info, #dob .info {
+#email .email-info, #password .password-info, #password-confirm .password-confirm-info {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
+    min-height: 64px;
     height: 64px;
     color: #787885;
     border: 1px solid #00BBF9;
     border-radius: 50px;
+    text-indent: 35px;
+}
+
+#name .info, #dob .info {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    height: 64px;
+    color: #787885;
+    background: #FFFFFF;
+    /* Black */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 32px;
+    text-indent: 24px;
+}
+
+span.first-icon{
+    position: absolute;
+    margin-left: 20px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.first-icon i {
+    color: #CECECE;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    color: #00BBF9;
+    text-indent: 24px;
+
 }
 
 #name .required:after, #dob .required:after {
@@ -46,4 +91,94 @@
 
 .container-below-input {
     padding-bottom: 20px;
+}
+
+/*button test*/
+.btn-5,
+.btn-5 *,
+.btn-5 :after,
+.btn-5 :before,
+.btn-5:after,
+.btn-5:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+.btn-5 {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: button;
+    background-image: none;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 100%;
+    font-weight: 900;
+    line-height: 1.5;
+    width: 100%;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+    text-transform: uppercase;
+    background-color:transparent;
+    color:#00BBF9;
+    border: 1px solid #00BBF9;
+    box-shadow: none;
+}
+.btn-5:disabled {
+    cursor: default;
+}
+.btn-5:-moz-focusring {
+    outline: auto;
+}
+.btn-5 svg {
+    display: block;
+    vertical-align: middle;
+}
+.btn-5 [hidden] {
+    display: none;
+}
+.btn-5 {
+    border-radius: 99rem;
+    border-width: 2px;
+    overflow: hidden;
+    padding: 0.8rem 3rem;
+    position: relative;
+}
+.btn-5 span {
+    mix-blend-mode: difference;
+}
+.btn-5 img {
+    mix-blend-mode: difference;
+    width: 25px;
+    margin-right: 8px;
+}
+.btn-5:before {
+    --tilt: 1.2rem;
+    background: #fff;
+    -webkit-clip-path: polygon(
+            0 0,
+            calc(100% - var(--tilt)) 0,
+            100% 50%,
+            calc(100% - var(--tilt)) 100%,
+            0 100%
+    );
+    clip-path: polygon(
+            0 0,
+            calc(100% - var(--tilt)) 0,
+            100% 50%,
+            calc(100% - var(--tilt)) 100%,
+            0 100%
+    );
+    content: "";
+    display: block;
+    height: 100%;
+    left: calc(-100% - var(--tilt));
+    position: absolute;
+    top: 0;
+    transform: translateX(var(--progress, 0));
+    transition: transform 0.2s ease;
+    width: calc(100% + var(--tilt));
+}
+.btn-5:hover:before {
+    --progress: 100%;
 }

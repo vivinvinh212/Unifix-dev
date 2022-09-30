@@ -50,6 +50,7 @@ export default function ForgotPassword() {
             <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px'}}>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id="email" style={{paddingBottom: "24px"}}>
+                        <span className="first-icon"><i className="gg-user"></i></span>
                         <Form.Control className="email-info" type="email" placeholder="Email của bạn" ref={emailRef} required />
                     </Form.Group>
                     <Button disabled={loading} className="w-100" type="submit"
