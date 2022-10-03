@@ -23,9 +23,8 @@
 #root {
     /*min-height: 2000px;*/
     /*background-color: #cae3ee;*/
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    background-size: 3000px;
+    background: url("../img/Lading page.png");
+    background-size: 100%;
 }
 
 .form-control::placeholder{
