@@ -12,13 +12,14 @@ import Login from "./login-page/Login";
 import ForgotPassword from "./login-page/ForgotPassword";
 import picture from "../img/Frame.png";
 import Footer from "./footer/Footer";
+import Study11 from "./study1-1/Study11";
 
 function App() {
   return (
     <div>
         <div className="navbar p-0"> <Navbar /> </div>
-      <Container className="d-flex align-items-center justify-content-center">
-        <div className="justify-content-left">
+      <Container>
+        <div>
           <Router>
             <AuthProvider>
               <Switch>
@@ -27,6 +28,7 @@ function App() {
                   <Route path="/login" component={Login} />
                   <Route path="/forgot-password" component={ForgotPassword} />
                   <Route path="/update-profile" component={UpdateProfile} />
+                  <Route path="/study1-1" component={Study11} />
               </Switch>
             </AuthProvider>
           </Router>
