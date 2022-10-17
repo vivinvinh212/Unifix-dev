@@ -98,7 +98,7 @@ export default function Study11() {
                                                         fontFamily: "var(--font-family)",
                                                         fontSize: "var(--small-header-size)"}}>
                                                     <p className="left mr-auto mb-0">Môn học</p>
-                                                    <p className="right mb-0">Xem tất cả các môn học</p>
+                                                    <p className="right mb-0" style={{color:"#FF2442"}}>Xem tất cả các môn học</p>
                                                 </Form.Label>
                                                 <Form.Control className="info"
                                                               type="name"
