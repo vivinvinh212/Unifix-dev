@@ -43,46 +43,48 @@ export default function Dashboard() {
 
   return (
     <>
-      <Card style={{
-        width:'588px',
-        height:'250px',
-        background:"linear-gradient(111.68deg, rgba(255, 255, 255, 0.29) 7.59%, rgba(255, 255, 255, 0.39) 102.04%)",
-        border: "3px solid rgba(255, 255, 255, 0.28)",
-        boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
-        backdropFilter:"blur(11px)",
-        borderRadius:"61px", marginTop: "var(--header-paddingTop)"}}>
-        <Card.Body>
-          <h2 className="text-center mb-4">Profile</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <div style={{textAlign: "center"}}>
-            <div style={{marginBottom: "1rem"}}>
-              {currentUser.photoURL ? <img className="card-image" src={currentUser.photoURL} /> : null}
+      <div className="d-flex align-items-center justify-content-center" style={{height:"500px"}}>
+        <Card className="d-flex align-items-center" style={{
+          width:'588px',
+          height:'250px',
+          background:"linear-gradient(111.68deg, rgba(255, 255, 255, 0.29) 7.59%, rgba(255, 255, 255, 0.39) 102.04%)",
+          border: "3px solid rgba(255, 255, 255, 0.28)",
+          boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
+          backdropFilter:"blur(11px)",
+          borderRadius:"61px", marginTop: "var(--header-paddingTop)"}}>
+          <Card.Body>
+            <h2 className="text-center mb-4">Profile</h2>
+            {error && <Alert variant="danger">{error}</Alert>}
+            <div style={{textAlign: "center"}}>
+              <div style={{marginBottom: "1rem"}}>
+                {currentUser.photoURL ? <img className="card-image" src={currentUser.photoURL} /> : null}
+              </div>
+              <strong>Email:</strong> {currentUser.email} <br />
+              {currentUser.displayName ? <p><strong>Name: </strong>{currentUser.displayName}</p>  : null}
             </div>
-            <strong>Email:</strong> {currentUser.email} <br />
-            {currentUser.displayName ? <p><strong>Name: </strong>{currentUser.displayName}</p>  : null}
-          </div>         
-          <div className="text-center">
-            {!currentUser.displayName ? <Link to="/update-profile" className="btn btn-primary mt-3" style={{
-              borderRadius: "var(--button-borderRadius)",
-              borderStyle: "var(--button-borderStyle)",
-              margin: "var(--button-margin)",
-              width: "384px",
-              height: "var(--button-height)",
-              lineHeight: "50px",
-              fontSize: "var(--button-fontSize)",
-              fontWeight: "var(--button-fontWeight)",
-              backgroundColor: "var(--button-backgroundColor)",
-              fontFamily: "var(--font-family)"}}>
-              <span>Update Profile</span>
-            </Link> : null}
-          </div>
-          <div className="w-100 text-center mt-2">
-            <Button variant="link" onClick={handleLogout} style={{color:"#00BBF9"}}>
-              Log Out
-            </Button>
-          </div>
-        </Card.Body>
-      </Card>
+            <div className="text-center">
+              {!currentUser.displayName ? <Link to="/update-profile" className="btn btn-primary mt-3" style={{
+                borderRadius: "var(--button-borderRadius)",
+                borderStyle: "var(--button-borderStyle)",
+                margin: "var(--button-margin)",
+                width: "384px",
+                height: "var(--button-height)",
+                lineHeight: "50px",
+                fontSize: "var(--button-fontSize)",
+                fontWeight: "var(--button-fontWeight)",
+                backgroundColor: "var(--button-backgroundColor)",
+                fontFamily: "var(--font-family)"}}>
+                <span>Update Profile</span>
+              </Link> : null}
+            </div>
+            <div className="w-100 text-center mt-2">
+              <Button variant="link" onClick={handleLogout} style={{color:"#00BBF9"}}>
+                Log Out
+              </Button>
+            </div>
+          </Card.Body>
+        </Card>
+      </div>
     </>
   )
 }

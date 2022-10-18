@@ -13,6 +13,8 @@ import ForgotPassword from "./login-page/ForgotPassword";
 import picture from "../img/Frame.png";
 import Footer from "./footer/Footer";
 import Study11 from "./study1-1/Study11";
+import CourseRegistration from "./course-registration/CourseRegistration";
+import CourseRegistrationDetail from "./course-registration/CourseRegistrationDetail";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
                   <Route path="/forgot-password" component={ForgotPassword} />
                   <Route path="/update-profile" component={UpdateProfile} />
                   <Route path="/study1-1" component={Study11} />
+                  <Route path="/course-registration" component={CourseRegistration} />
+                  <Route path="/course-detail" component={CourseRegistrationDetail} />
               </Switch>
             </AuthProvider>
           </Router>

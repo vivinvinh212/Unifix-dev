@@ -11,7 +11,7 @@ const Navbar = () => {
             <div className="logo"><a href="/"><img src={logo} alt=""/></a></div>
             <ul className="left-navbar-content">
                 <li><a href="#">Môn học</a></li>
-                <li><a href="#">Lớp học</a></li>
+                <li><a href="/course-registration">Lớp học</a></li>
                 <li><a href="/study1-1">Học 1-1</a></li>
                 <li><a href="#">Tự học</a></li>
                 <li><a href="#">Về UniFix</a></li>
