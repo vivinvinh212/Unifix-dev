@@ -28,25 +28,25 @@ export default function CourseRegistrationDetail () {
                         </div>
                     </div>
                 </div>
-                <Container className="d-flex align-items-center justify-content-center" style={{marginTop:"80px"}}>
-                    <div style={{width:"1200px"}}>
+                <div className="d-flex align-items-center justify-content-center" style={{marginTop:"80px"}}>
+                    <div className="w-100 d-flex align-items-center justify-content-center">
                         <Card style=
                                   {{
-                                      width: "1200px",
-                                      height: "1400px",
+                                      width: "83.3%",
+                                      height: "fit-content",
                                       background: "linear-gradient(111.68deg, rgba(255, 255, 255, 0.162) 7.59%, rgba(255, 255, 255, 0.054) 102.04%)",
                                       border: "3px solid rgba(255, 255, 255, 0.28)",
                                       boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
                                       WebkitBackdropFilter: "blur(20px)",
                                       borderRadius: "61px"}}>
                             <Card.Body>
-                                <Container style={{marginTop:"40px", marginLeft:"30px"}}>
-                                    <Row>
-                                        <div className="col d-flex align-items-center justify-content-center">
-                                            <div style={{width:"600px"}}>
-                                                <div className="course-general d-flex align-items-center justify-content-center" style={{height:"214px"}}>
+                                <div className="container-fluid" style={{marginTop:"40px"}}>
+                                    <div className="d-flex justify-content-around">
+                                        <div className="left" style={{marginLeft:"8.5%"}}>
+                                            <div style={{width:"70.6%", minWidth:"584px"}}>
+                                                <div className="course-general" style={{height:"214px"}}>
                                                     <ul style={{listStyle:"none", padding:"0"}}>
-                                                        <li style={{fontSize:"32px", fontWeight:"600", width:"620px"}}>Members-Only Event: Behind the Scenes of Brave Wilderness Studios</li>
+                                                        <li style={{fontSize:"32px", fontWeight:"600", width:"100%"}}>Members-Only Event: Behind the Scenes of Brave Wilderness Studios</li>
                                                         <li style={{fontSize:"14px"}}>Grades 1-6</li>
                                                     </ul>
                                                 </div>
@@ -66,18 +66,18 @@ export default function CourseRegistrationDetail () {
                                                 <div className="course-syllabus">
                                                     <h2 style={{fontSize:"20px", marginTop:"34px"}}>Syllabus</h2>
                                                     <div className="d-flex flex-row" style={{fontSize:"16px", fontWeight:"500", marginTop:"26px"}}>
-                                                        <div className="d-flex" style={{marginRight:"26px", width:"122px"}}>
+                                                        <div className="d-flex" style={{marginRight:"26px"}}>
                                                             <img src={calendarIcon} alt="" style={{height:"32px", paddingRight:"14px"}}/>
                                                             <div>
                                                                 <p style={{lineHeight:"32px", margin:"0"}}>1 section</p>
                                                                 <p style={{fontSize:"12px", color:"#818181"}}>1x per week</p>
                                                             </div>
                                                         </div>
-                                                        <div className="d-flex" style={{marginRight:"26px", width:"218px"}}>
+                                                        <div className="d-flex" style={{marginRight:"26px"}}>
                                                             <img src={clockIcon} alt="" style={{height:"32px", paddingRight:"14px"}}/>
                                                             <p style={{lineHeight:"32px"}}>Class length: 45 min</p>
                                                         </div>
-                                                        <div className="d-flex" style={{width:"208px"}}>
+                                                        <div className="d-flex">
                                                             <img src={levelIcon} alt="" style={{height:"32px", paddingRight:"14px"}}/>
                                                             <p style={{lineHeight:"32px"}}>Level: Fundamental</p>
                                                         </div>
@@ -91,7 +91,7 @@ export default function CourseRegistrationDetail () {
                                                         <li>3. Là sinh viên</li>
                                                     </ul>
                                                 </div>
-                                                <div className="tutor-description" style={{marginTop:"34px"}}>
+                                                <div className="tutor-introduction" style={{marginTop:"34px"}}>
                                                     <h2 style={{fontSize:"20px"}}>About Misti S.</h2>
                                                     <p style={{
                                                         marginTop:"26px",
@@ -123,20 +123,20 @@ export default function CourseRegistrationDetail () {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-md">
-                                            <img src={courseImg} alt="" style={{width:"384px", marginBottom:"329px"}}/>
+                                        <div className="right" style={{marginRight:"8.5%", width:"60%"}}>
+                                            <img src={courseImg} alt="" style={{width:"100%", marginBottom:"329px"}}/>
                                             <Card className="d-flex align-items-center justify-content-center" style={{
-                                                    width: "450px",
-                                                    height: "564px",
+                                                    minWidth: "450px", width:"100%", marginLeft:"10%",
+                                                    height: "fit-content",
                                                     background: "linear-gradient(111.68deg, rgba(255, 255, 255, 0.162) 7.59%, rgba(255, 255, 255, 0.054) 102.04%)",
                                                     border: "3px solid rgba(255, 255, 255, 0.28)",
                                                     boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
                                                     WebkitBackdropFilter: "blur(20px)",
                                                     borderRadius: "61px"}}>
-                                                <Card.Title style={{width:"380px", fontSize:"24px", marginTop:"40px"}}>
+                                                <Card.Title style={{width:"85.1%", fontSize:"24px", marginTop:"40px"}}>
                                                     Members-Only Event: Behind the Scenes of Brave Wilderness Studios
                                                 </Card.Title>
-                                                <Card.Body className="mt-3" style={{width:"384px", padding:"0"}}>
+                                                <Card.Body className="mt-3" style={{width:"85.1%", padding:"0", paddingBottom:"40px"}}>
                                                     <h2 style={{fontSize:"16px", padding:"0"}}>Small group Class</h2>
                                                     <ul className="w-100" style={{fontSize:"14px", color:"#5A5A5A"}}>
                                                         <li className="mt-4 mb-2">Typically 6-9 students per class</li>
@@ -144,14 +144,14 @@ export default function CourseRegistrationDetail () {
                                                         <li className="mb-2">Opportunities to collaborate and engage in discussion</li>
                                                         <li className="mb-2">Unlimited access to this class and more free with <span style={{textDecoration:"underline", color:"#00BBF9"}}>Learning Membership</span></li>
                                                     </ul>
-                                                    <div className="mt-4" style={{width:"384px", border: "1px solid #A7A7A7"}}></div>
-                                                    <div className="d-flex course-recap" style={{marginTop:"30px"}}>
-                                                        <div className="left-course-recap" style={{fontSize:"14px", color:"#333333", width:"190px", height:"90px"}}>
+                                                    <div className="mt-4" style={{width:"100%", border: "1px solid #A7A7A7"}} />
+                                                    <div className="d-flex flex-row course-recap" style={{marginTop:"30px"}}>
+                                                        <div className="left mr-auto left-course-recap" style={{fontSize:"14px", color:"#333333", minWidth:"190px", width:"49.4%", height:"90px"}}>
                                                             <p>Wed, Sep 7 - Wed, Sep 7</p>
                                                             <p>Thu @ 3:30 AM (GMT +7)</p>
                                                             <p>View detail</p>
                                                         </div>
-                                                        <div className="right-course-recap" style={{width:"179px"}}>
+                                                        <div className="right right-course-recap" style={{width:"179px"}}>
                                                             <p style={{fontSize:"32px", float:"right", margin:"0", color:"#FF2442"}}>15$<span style={{fontSize:"14px", color:"#333"}}>/mo</span></p>
                                                             <Button type="submit"
                                                                     style={{
@@ -172,12 +172,12 @@ export default function CourseRegistrationDetail () {
                                                 </Card.Body>
                                             </Card>
                                         </div>
-                                    </Row>
-                                </Container>
+                                    </div>
+                                </div>
                             </Card.Body>
                         </Card>
                     </div>
-                </Container>
+                </div>
                 <div className="d-flex align-items-center justify-content-center" style={{marginTop:"46px"}}>
                     <img src={banner3} alt=""/>
                 </div>

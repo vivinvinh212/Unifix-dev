@@ -22,8 +22,6 @@
 }
 
 #root {
-    /*min-height: 2000px;*/
-    /*background-color: #cae3ee;*/
     background: url("../img/landing-page-background.png");
     background-size: 100%;
 }
@@ -106,6 +104,20 @@ select {
 
 .container-below-input {
     padding-bottom: 20px;
+}
+
+/*TutorDescription*/
+.subject {
+    width: fit-content;
+    height: fit-content;
+    font-size: 12px;
+    color: white;
+    padding: 8px 24px;
+    background: #00BBF9;
+    border: 1px solid #00BBF9;
+    box-shadow: 0px 4px 4px rgba(0, 187, 249, 0.2), inset -2px -2px 4px rgba(0, 0, 0, 0.25);
+    border-radius:16px;
+    margin-bottom:40px;
 }
 
 /*button test*/
@@ -196,4 +208,47 @@ select {
 }
 .btn-5:hover:before {
     --progress: 100%;
+}
+
+/* Popup style */
+.popup-box {
+    position: fixed;
+    background: rgba(154, 153, 153, 0.2);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+}
+
+.box {
+    position: relative;
+    z-index: 100 !important;
+    width: fit-content;
+    margin: 0 auto;
+    height: fit-content;
+    min-height: 700px;
+    max-height: 70vh;
+    margin-top: calc(100vh - 85vh - 50px);
+    padding: 32px 190px 87px;
+    background: #EEFBFE;
+    border: 3px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0px 4px 40px rgba(0, 187, 249, 0.2);
+    backdrop-filter: blur(11px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 61px;
+}
+
+.close-icon {
+    content: 'x';
+    cursor: pointer;
+    position: absolute;
+    z-index: 200;
+    right: 40px;
+    top: 40px;
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 30px;
 }

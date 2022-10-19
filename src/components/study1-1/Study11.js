@@ -65,7 +65,6 @@ export default function Study11() {
                                           boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
                                           backdropFilter: "blur(11px)",
                                           borderRadius: "61px"}}>
-                                <img className="card-img-top" src="" alt="" />
 
                                     <Card.Body style={{marginTop:"80px"}}>
                                         <Form>
@@ -233,7 +232,7 @@ export default function Study11() {
                                                     </ul>
                                                     <div style={{width:"151px"}}>
                                                         <p className="" style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>0$</p>
-                                                        <Button className="w-100" type="submit"
+                                                        <Button href="/tutor-description" className="w-100" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
@@ -272,7 +271,7 @@ export default function Study11() {
                                                     </ul>
                                                     <div style={{width:"151px"}}>
                                                         <p className="" style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>12$</p>
-                                                        <Button className="w-100" type="submit"
+                                                        <Button href="/tutor-description" className="w-100" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
@@ -312,7 +311,7 @@ export default function Study11() {
                                                     <div style={{width:"151px"}}>
                                                         <p style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>12$</p>
                                                         <div className="d-flex align-items-center justify-content-center mb-4"><img src={star} alt=""/></div>
-                                                        <Button className="w-100" type="submit"
+                                                        <Button  href="/tutor-description" className="w-100" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",

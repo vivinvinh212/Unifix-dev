@@ -29,7 +29,7 @@ export default function CourseRegistration () {
                         </div>
                     </div>
                 </div>
-                <Container style={{maxWidth:"1200px", marginTop:"80px"}}>
+                <div className="container-fluid d-flex align-items-center justify-content-center" style={{minWidth:"1200px", width:"83.3%", marginTop:"80px"}}>
                     <Row>
                         <div className="col-auto mb-4">
                             <Card style=
@@ -265,7 +265,7 @@ export default function CourseRegistration () {
                             </Card>
                         </div>
                     </Row>
-                </Container>
+                </div>
                 <div className="d-flex align-items-center justify-content-center" style={{marginTop:"46px"}}>
                     <img src={banner2} alt=""/>
                 </div>
