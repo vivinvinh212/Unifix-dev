@@ -244,7 +244,7 @@ export default function TutorDescription() {
                                         <div className="comment">
                                             <div style={{marginBottom:"68px"}}>
                                                 <img src={star} alt=""/>
-                                                <div className="d-flex flex-row mt-3">
+                                                <div className="heading d-flex flex-row mt-3">
                                                     <div className="left mr-auto">Anthony</div>
                                                     <div className="right" style={{color:"#5A5A5A"}}>Teacher's Studio</div>
                                                 </div>
@@ -253,7 +253,7 @@ export default function TutorDescription() {
                                             </div>
                                             <div style={{marginBottom:"68px"}}>
                                                 <img src={star} alt=""/>
-                                                <div className="d-flex flex-row mt-3">
+                                                <div className="heading d-flex flex-row mt-3">
                                                     <div className="left mr-auto">Cristiano Ronaldo</div>
                                                     <div className="right" style={{color:"#5A5A5A"}}>Teacher's Studio</div>
                                                 </div>
@@ -262,7 +262,7 @@ export default function TutorDescription() {
                                             </div>
                                             <div style={{marginBottom:"68px"}}>
                                                 <img src={star} alt=""/>
-                                                <div className="d-flex flex-row mt-3">
+                                                <div className="heading d-flex flex-row mt-3">
                                                     <div className="left mr-auto">Casemiro</div>
                                                     <div className="right" style={{color:"#5A5A5A"}}>Teacher's Studio</div>
                                                 </div>
@@ -271,7 +271,7 @@ export default function TutorDescription() {
                                             </div>
                                             <div>
                                                 <img src={star} alt=""/>
-                                                <div className="d-flex flex-row mt-3">
+                                                <div className="heading d-flex flex-row mt-3">
                                                     <div className="left mr-auto">Neymar Jr</div>
                                                     <div className="right" style={{color:"#5A5A5A"}}>Teacher's Studio</div>
                                                 </div>

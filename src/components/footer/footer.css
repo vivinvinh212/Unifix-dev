@@ -52,7 +52,7 @@
     }
 
     #footer ul .subjects {
-        width: 96px;
+        min-width: 96px;
         height: 212px;
         flex: none;
         order: 1;

@@ -96,8 +96,10 @@ export default function Login() {
                           <div className="d-flex justify-content-center mt-4 mb-3" style={{color:"#A7A7A7"}}>
                               Hoặc đăng nhập với
                           </div>
-                          <button className="btn-5 mb-4"><img src={googleIcon} alt=""/><span style={{fontWeight:"700"}}>Google</span></button>
-                          <button className="btn-5"><img src={facebookIcon} alt=""/><span style={{fontWeight:"700"}}>Facebook</span></button>
+                          <div id="outer" className="w-100">
+                              <button className="button_slide slide_right w-100 mb-4"><img style={{height:"20px", marginRight:"10px", paddingBottom:"2px"}} src={googleIcon} alt=""/><span style={{fontWeight:"700"}}>Google</span></button>
+                              <button className="button_slide slide_right w-100"><img style={{height:"20px", marginRight:"10px", paddingBottom:"2px"}} src={facebookIcon} alt=""/><span style={{fontWeight:"700"}}>Facebook</span></button>
+                          </div>
                           <div className="forgot-password text-center" style={{paddingTop:'32px'}}>
                               <Link to="/forgot-password" style={{color: "#FFB830", textDecorationLine:'underline'}}>Bạn quên mật khẩu?</Link>
                           </div>
