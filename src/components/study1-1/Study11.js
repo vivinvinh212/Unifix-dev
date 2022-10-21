@@ -232,14 +232,14 @@ export default function Study11() {
                                                     </ul>
                                                     <div style={{width:"151px"}}>
                                                         <p className="" style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>0$</p>
-                                                        <Button href="/tutor-description" className="w-100" type="submit"
+                                                        <Button href="/tutor-description" className="w-100 d-flex align-items-center justify-content-center" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
                                                                     margin: "var(--button-margin)",
                                                                     height: "40px",
                                                                     fontSize: "14px",
-                                                                    fontWeight: "var(--button-fontWeight)",
+                                                                    fontWeight: "600",
                                                                     backgroundColor: "var(--button-backgroundColor)",
                                                                     fontFamily: "var(--font-family)",
                                                                     boxShadow: "var(--button-boxShadow)"}}>
@@ -271,14 +271,14 @@ export default function Study11() {
                                                     </ul>
                                                     <div style={{width:"151px"}}>
                                                         <p className="" style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>12$</p>
-                                                        <Button href="/tutor-description" className="w-100" type="submit"
+                                                        <Button href="/tutor-description" className="w-100 d-flex align-items-center justify-content-center" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
                                                                     margin: "var(--button-margin)",
                                                                     height: "40px",
                                                                     fontSize: "14px",
-                                                                    fontWeight: "var(--button-fontWeight)",
+                                                                    fontWeight: "600",
                                                                     backgroundColor: "var(--button-backgroundColor)",
                                                                     fontFamily: "var(--font-family)",
                                                                     boxShadow: "var(--button-boxShadow)"}}>
@@ -311,14 +311,14 @@ export default function Study11() {
                                                     <div style={{width:"151px"}}>
                                                         <p style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>12$</p>
                                                         <div className="d-flex align-items-center justify-content-center mb-4"><img src={star} alt=""/></div>
-                                                        <Button  href="/tutor-description" className="w-100" type="submit"
+                                                        <Button  href="/tutor-description" className="w-100 d-flex align-items-center justify-content-center" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
                                                                     margin: "var(--button-margin)",
                                                                     height: "40px",
                                                                     fontSize: "14px",
-                                                                    fontWeight: "var(--button-fontWeight)",
+                                                                    fontWeight: "600",
                                                                     backgroundColor: "var(--button-backgroundColor)",
                                                                     fontFamily: "var(--font-family)",
                                                                     boxShadow: "var(--button-boxShadow)"}}>

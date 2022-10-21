@@ -90,6 +90,24 @@
     color: #FFB830 !important;
 }
 
+
+/*tutor description page style changes based on scroll*/
+.test {
+    color: #5A5A5A;
+}
+
+.test.colorChange > p{
+    color:#00BBF9;
+}
+
+.test.colorChange > div {
+    width:132px;
+    height:3px;
+    background:#00BBF9;
+}
+/**/
+
+/*form style*/
 #email .email-info, #password .password-info, #password-confirm .password-confirm-info {
     font-family: Poppins;
     font-style: normal;

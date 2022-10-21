@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {Button, Card} from "react-bootstrap";
 import "../theme.css";
 import ProfileAvatar3 from "../../img/Profile-avatar-3.png";
@@ -10,13 +10,56 @@ import skillIcon from "../../img/skill_icon.png";
 import programIcon from "../../img/program_icon.png";
 import Modal from "./popup-register/Modal";
 import banner4 from "../../img/banner4.png";
+import {Link} from "react-router-dom";
 
 export default function TutorDescription() {
+    const overviewRef = useRef(null);
+    const assessmentRef = useRef(null);
+    const experienceRef = useRef(null);
+
+    const executeScroll1 = () => overviewRef.current.scrollIntoView({behavior:"smooth"})
+    const executeScroll2 = () => assessmentRef.current.scrollIntoView({behavior:"smooth"})
+    const executeScroll3 = () => experienceRef.current.scrollIntoView({behavior:"smooth"})
+
     const [isOpen, setIsOpen] = useState(false);
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
     }
+
+    const [colorChange, setColorChange] = useState(false);
+    const [colorChange1, setColorChange1] = useState(false);
+    const [colorChange2, setColorChange2] = useState(false);
+
+    const changeTextColor = () =>{
+        if(window.scrollY <= 620){
+            setColorChange(true);
+        }
+        else{
+            setColorChange(false);
+        }
+    };
+    window.addEventListener('scroll', changeTextColor);
+
+    const changeTextColor1 = () =>{
+        if(window.scrollY >= 620 && window.scrollY <= 2700){
+            setColorChange1(true);
+        }
+        else{
+            setColorChange1(false);
+        }
+    };
+    window.addEventListener('scroll', changeTextColor1);
+
+    const changeTextColor2 = () =>{
+        if(window.scrollY >= 2700){
+            setColorChange2(true);
+        }
+        else{
+            setColorChange2(false);
+        }
+    };
+    window.addEventListener('scroll', changeTextColor2);
 
     return (
         <>
@@ -32,7 +75,7 @@ export default function TutorDescription() {
                             borderRadius: "32px", borderStyle:"none", marginBottom:"32px", marginTop:"120px", border: "3px solid rgba(255, 255, 255, 0.28)"}}>
                             <Card.Body className="d-flex flex-row align-items-center justify-content-center">
                                 <img style={{width:"280px", height:"280px", marginRight:"20%"}} src={ProfileAvatar3} alt=""/>
-                                <div style={{width:"551px"}}>
+                                <div style={{width:"30%", minWidth:"551px"}}>
                                     <div className="tutor-description-heading d-flex align-items-center">
                                         <p style={{fontSize:"32px", fontWeight:"600", margin:"0", marginRight:"65px"}}>Edison Max</p>
                                         <img src={star} alt="" style={{height:"20px"}}/>
@@ -84,11 +127,21 @@ export default function TutorDescription() {
                             borderRadius: "32px", borderStyle:"none", marginBottom:"32px", border: "3px solid rgba(255, 255, 255, 0.28)"}}>
                             <Card.Body className="d-flex align-content-center justify-content-center" style={{width:"66.6%"}}>
                                 <div>
-                                    <div className="overview d-flex align-items-center justify-content-center" style={{gap:"80px", fontSize:"20px", color:"#5A5A5A", marginTop:"40px"}}>
-                                        <div>Tổng quan</div>
-                                        <div>Đánh giá</div>
-                                        <div>Kinh nghiệm</div>
+                                    <div className="overview d-flex align-items-center justify-content-center" style={{gap:"80px", fontSize:"20px", fontWeight:"600", color:"#5A5A5A", marginTop:"40px"}}>
+                                        <div onClick={executeScroll1} className={colorChange ? "test colorChange" : "test"} style={{width:"132px", cursor:"pointer"}}>
+                                            <p className="text-center" style={{marginBottom:"12px"}}>Tổng quan</p>
+                                            <div></div>
+                                        </div>
+                                        <div onClick={executeScroll2} className={colorChange1 ? "test colorChange" : "test"} style={{width:"132px", cursor:"pointer"}}>
+                                            <p className="text-center" style={{marginBottom:"12px"}}>Đánh giá</p>
+                                            <div></div>
+                                        </div>
+                                        <div onClick={executeScroll3} className={colorChange2 ? "test colorChange" : "test"} style={{width:"132px", cursor:"pointer"}}>
+                                            <p className="text-center" style={{marginBottom:"12px"}}>Kinh nghiệm</p>
+                                            <div></div>
+                                        </div>
                                     </div>
+                                    <div ref={overviewRef}></div>
                                     <h2 style={{textAlign:"center", fontSize:"24px", marginTop:"69px", marginBottom:"34px"}}>Về Edison Max</h2>
                                     <div style={{color:"#5A5A5A", fontSize:"20px"}}>
                                         <div className="d-flex">
@@ -124,6 +177,7 @@ export default function TutorDescription() {
                                             <div className="subject">OOP</div>
                                         </div>
                                     </div>
+                                    <div ref={assessmentRef}></div>
                                     <div>
                                         <h2 style={{fontSize:"24px", fontWeight:"600", marginTop:"64px", textAlign:"center", marginBottom:"64px"}}>Đánh giá</h2>
                                         <div className="rating d-flex align-items-center justify-content-center" style={{marginBottom:"127px"}}>
@@ -225,6 +279,7 @@ export default function TutorDescription() {
                                                 <p className="mt-3" style={{color:"#818181"}}>Posted Sep 7, 2022</p>
                                             </div>
                                         </div>
+                                        <div ref={experienceRef}></div>
                                         <div className="experience" style={{marginTop:"64px"}}>
                                             <h2 style={{fontSize:"24px", fontWeight:"600", marginTop:"64px", textAlign:"center", marginBottom:"64px"}}>
                                                 Kinh nghiệm
