@@ -14,6 +14,8 @@ import Study11 from "./study1-1/Study11";
 import TutorDescription from "./study1-1/TutorDescription";
 import CourseRegistration from "./course-registration/CourseRegistration";
 import CourseRegistrationDetail from "./course-registration/CourseRegistrationDetail";
+import ProfilePageInfo from "./profile-page/ProfilePageInfo";
+import ProfilePageSession from "./profile-page/ProfilePageSession";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
                   <Route path="/course-registration" component={CourseRegistration} />
                   <Route path="/course-detail" component={CourseRegistrationDetail} />
                   <Route path="/tutor-description" component={TutorDescription} />
+                  <Route path="/profile-page-info" component={ProfilePageInfo}/>
+                  <Route path="/profile-page-sessions&reviews" component={ProfilePageSession}/>
               </Switch>
             </AuthProvider>
           </Router>

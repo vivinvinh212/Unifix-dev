@@ -48,7 +48,7 @@ export default function UpdateProfile() {
           <h2 className="text-center mb-4" style={{
               fontWeight:"var(--header-weight)",
               fontSize:"var(--header-size)",
-              marginTop: "var(--header-paddingTop)"}}>Hoàn thành hồ sơ</h2>
+              marginTop: "var(--header-marginTop)"}}>Hoàn thành hồ sơ</h2>
           <div className="text-center" style={{marginBottom:"80px"}}>Chỉ còn 1 bước nữa thôi là bạn đã là thành viên của Unifix</div>
           {error && <Alert variant="danger">{error}</Alert>}
           <div className="d-flex align-items-center justify-content-center">

@@ -17,7 +17,7 @@ const Navbar = () => {
                 <li><a href="#">Về UniFix</a></li>
             </ul>
             <ul className="right-navbar-content">
-                <li><a href="#">Giảng viên</a></li>
+                <li><a href="/profile-page-info">Giảng viên</a></li>
                 <li>
                     <a className="login-button" href="/" style={{color:"#00BBF9"}}>
                     <FontAwesomeIcon icon={faRightToBracket} style={{paddingRight:"12.5px"}}/>

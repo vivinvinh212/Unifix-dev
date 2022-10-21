@@ -51,7 +51,7 @@ export default function Dashboard() {
           border: "3px solid rgba(255, 255, 255, 0.28)",
           boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
           backdropFilter:"blur(11px)",
-          borderRadius:"61px", marginTop: "var(--header-paddingTop)"}}>
+          borderRadius:"61px", marginTop: "var(--header-marginTop)"}}>
           <Card.Body>
             <h2 className="text-center mb-4">Profile</h2>
             {error && <Alert variant="danger">{error}</Alert>}

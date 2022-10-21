@@ -58,10 +58,10 @@ export default function Signup() {
             style={{
             fontWeight:"var(--header-weight)",
             fontSize:"var(--header-size)",
-            marginTop: "var(--header-paddingTop)"}}>Đăng ký</h2>
+            marginTop: "var(--header-marginTop)"}}>Đăng ký</h2>
         <div className="text-center" style={{marginBottom:"80px"}}>Đăng ký để trở thành thành viên mới của UniFix!</div>
         {error && <Alert variant="danger">{error}</Alert>}
-        <div className="d-flex align-items-center justify-content-center">
+        <div className="container-fluid d-flex align-items-center justify-content-center">
           <Card className="d-flex align-items-center"
                 style={{
                     width:'588px',
@@ -71,7 +71,7 @@ export default function Signup() {
                     boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
                     backdropFilter:"blur(11px)",
                     borderRadius:"61px"}}>
-              <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px'}}>
+              <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px', paddingLeft:"0", paddingRight:"0"}}>
                   <Form onSubmit={handleSubmit}>
                       <Form.Group id="email" style={{paddingBottom: "10px"}}>
                           <span className="first-icon"><i className="gg-user"></i></span>
@@ -88,8 +88,8 @@ export default function Signup() {
                       <div className="d-flex justify-content-center mt-3 mb-3" style={{color:"#A7A7A7"}}>
                           Hoặc đăng ký với
                       </div>
-                      <button className="btn-5 mb-4"><img src={googleIcon} alt=""/><span>Google</span></button>
-                      <button className="btn-5"><img src={facebookIcon} alt=""/><span>Facebook</span></button>
+                      <button className="btn-5 mb-4"><img src={googleIcon} alt=""/><span style={{fontWeight:"700"}}>Google</span></button>
+                      <button className="btn-5"><img src={facebookIcon} alt=""/><span style={{fontWeight:"700"}}>Facebook</span></button>
                       <div className="w-100 text-center mt-5 mb-4" style={{color: "#A7A7A7"}}>
                           Bạn đã có tài khoản? <Link to="/login" style={{color: "#00BBF9"}}>Đăng nhập</Link>
                       </div>

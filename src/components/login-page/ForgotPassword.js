@@ -29,12 +29,11 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <div className="forgot-password">
+      <div className="forgot-password" style={{marginTop: "var(--header-marginTop)", marginBottom:"20%"}}>
         <h2 className="text-center mb-4"
             style={{
                 fontWeight: "var(--header-weight)",
-                fontSize: "var(--header-size)",
-                paddingTop: "var(--header-paddingTop)"}}>Thay đổi mật khẩu</h2>
+                fontSize: "var(--header-size)"}}>Thay đổi mật khẩu</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         {message && <Alert variant="success">{message}</Alert>}
           <div className="d-flex align-items-center justify-content-center">
@@ -47,8 +46,8 @@ export default function ForgotPassword() {
                         boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
                         backdropFilter:"blur(11px)",
                         borderRadius:"61px"}}>
-                  <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px'}}>
-                      <Form onSubmit={handleSubmit}>
+                  <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px', paddingLeft:"0", paddingRight:"0"}}>
+                      <Form className="w-100" onSubmit={handleSubmit}>
                           <Form.Group id="email" style={{paddingBottom: "24px"}}>
                               <span className="first-icon"><i className="gg-user"></i></span>
                               <Form.Control className="email-info" type="email" placeholder="Email của bạn" ref={emailRef} required />

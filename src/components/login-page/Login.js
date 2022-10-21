@@ -57,7 +57,7 @@ export default function Login() {
               style={{
                   fontWeight:"var(--header-weight)",
                   fontSize:"var(--header-size)",
-                  marginTop: "var(--header-paddingTop)"}}>Đăng nhập</h2>
+                  marginTop: "var(--header-marginTop)"}}>Đăng nhập</h2>
           <div className="text-center" style={{marginBottom:"80px"}}>Hãy đăng nhập tài khoản của bạn để tham gia ngay!</div>
           {error && <Alert variant="danger">{error}</Alert>}
           <div className="d-flex align-items-center justify-content-center">
@@ -70,7 +70,7 @@ export default function Login() {
                         boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
                         backdropFilter:"blur(11px)",
                         borderRadius:"61px"}}>
-                  <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px'}}>
+                  <Card.Body className="d-flex align-items-center justify-content-center" style={{width:'384px', paddingLeft:"0", paddingRight:"0"}}>
                       <Form onSubmit={handleSubmit}>
                           <Form.Group className="has-feedback" id="email" style={{paddingBottom: "10px"}}>
                               <span className="first-icon"><i className="gg-user"></i></span>
@@ -96,8 +96,8 @@ export default function Login() {
                           <div className="d-flex justify-content-center mt-4 mb-3" style={{color:"#A7A7A7"}}>
                               Hoặc đăng nhập với
                           </div>
-                          <button className="btn-5 mb-4"><img src={googleIcon} alt=""/><span>Google</span></button>
-                          <button className="btn-5"><img src={facebookIcon} alt=""/><span>Facebook</span></button>
+                          <button className="btn-5 mb-4"><img src={googleIcon} alt=""/><span style={{fontWeight:"700"}}>Google</span></button>
+                          <button className="btn-5"><img src={facebookIcon} alt=""/><span style={{fontWeight:"700"}}>Facebook</span></button>
                           <div className="forgot-password text-center" style={{paddingTop:'32px'}}>
                               <Link to="/forgot-password" style={{color: "#FFB830", textDecorationLine:'underline'}}>Bạn quên mật khẩu?</Link>
                           </div>
