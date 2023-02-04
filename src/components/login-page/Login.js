@@ -16,6 +16,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
+
   async function handleSubmit(e) {
     e.preventDefault()
 
@@ -80,7 +81,7 @@ export default function Login() {
                               <span className="first-icon"><i className="gg-menu-boxed"></i></span>
                               <FormControl className="password-info" type="password" placeholder="Mật khẩu" style={{fontSize:'16px', fontWeight:'500'}} ref={passwordRef} required />
                           </Form.Group>
-                          <Button disabled={loading} className="w-100" type="submit"
+                          <Button disabled={loading} className="w-100" type="submit" 
                                   style={{
                                       borderRadius: "var(--button-borderRadius)",
                                       borderStyle: "var(--button-borderStyle)",

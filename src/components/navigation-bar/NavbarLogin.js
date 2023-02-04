@@ -1,6 +1,9 @@
 import React from "react";
 import "./navbar.css"
 import logo from "../../img/Unifix-removebg.png";
+import announcement from "../../img/announcement.png";
+import class1 from "../../img/class.png";
+import ava from "../../img/ava.png";
 import "../../icon/themify-icons/themify-icons.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faRightToBracket} from "@fortawesome/free-solid-svg-icons";
@@ -17,11 +20,13 @@ const Navbar = () => {
                 <li><a href="#">Về UniFix</a></li>
             </ul>
             <ul className="right-navbar-content">
-                <li><a href="/profile-page-info">Giảng viên</a></li>
+                <li></li>
+                <li><img src={announcement} alt="" />
+                <img src={class1} alt="" style={{marginLeft: "20px"}}/>
+                <a href="/make-class1" style={{marginLeft: "20px"}}>Tạo lớp học</a>
+                </li>
                 <li>
-                    <a className="login-button" href="/login" style={{color:"#00BBF9"}}>
-                    <FontAwesomeIcon icon={faRightToBracket} style={{paddingRight:"12.5px"}}/>
-                        Đăng nhập</a>
+                <a href="/profile-page-info"><img src={ava} alt=""/></a>
                 </li>
             </ul>
         </div>

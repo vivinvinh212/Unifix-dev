@@ -3,9 +3,10 @@ import "../theme.css";
 import {Button, Card, Container, Form, FormControl, Row} from "react-bootstrap";
 import dropdown from "../../img/Dropdown.png";
 import "../../icon/css.gg-master/icons/all.css";
-import ProfileAvatar from "../../img/Profile-avatar.png";
-import ProfileAvatar1 from "../../img/Profile-avatar-1.png";
-import ProfileAvatar2 from "../../img/Profile-avatar-2.png";
+import ProfileAvatar from "../../img/Thinh.png";
+import ProfileAvatar1 from "../../img/Cuong.png";
+import ProfileAvatar2 from "../../img/MaiAnh.png";
+import ProfileAvatar3 from "../../img/ThaoLy.png";
 import star from "../../img/star.png";
 import banner1 from "../../img/banner1.png";
 import banner from "../../img/banner.png";
@@ -59,7 +60,7 @@ export default function Study11() {
                             <Card style=
                                       {{
                                           width: "384px",
-                                          height: "1001px",
+                                          height: "1301px",
                                           background: "rgba(189, 244, 249, 0.2)",
                                           border: "3px solid rgba(255, 255, 255, 0.28)",
                                           boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
@@ -183,7 +184,7 @@ export default function Study11() {
                             <Card style=
                                       {{
                                           width: "792px",
-                                          height: "1001px",
+                                          height: "1301px",
                                           background: "rgba(189, 244, 249, 0.2)",
                                           border: "3px solid rgba(255, 255, 255, 0.28)",
                                           boxShadow: "0px 4px 40px rgba(0, 187, 249, 0.2)",
@@ -224,7 +225,7 @@ export default function Study11() {
                                                         fontWeight:"500",
                                                         padding:"0",
                                                         marginRight:"43px", color:"#5A5A5A"}}>
-                                                        <li style={{fontSize:"16px", fontWeight:"700", marginBottom:"8px", color:"#333333"}}>Edison Max</li>
+                                                        <li style={{fontSize:"16px", fontWeight:"700", marginBottom:"8px", color:"#333333"}}>Dao Duc Thinh</li>
                                                         <li style={{marginBottom:"8px"}}>Vin University</li>
                                                         <li style={{marginBottom:"8px"}}>Lập trình C++</li>
                                                         <li style={{marginBottom:"8px"}}>Hi, I Am Edison Max, a graduate student
@@ -232,7 +233,7 @@ export default function Study11() {
                                                     </ul>
                                                     <div style={{width:"151px"}}>
                                                         <p className="" style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>0$</p>
-                                                        <Button href="/tutor-description" className="w-100 d-flex align-items-center justify-content-center" type="submit"
+                                                        <Button href="/tutor1" className="w-100 d-flex align-items-center justify-content-center" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
@@ -263,15 +264,15 @@ export default function Study11() {
                                                         fontWeight:"500",
                                                         padding:"0",
                                                         marginRight:"43px", color:"#5A5A5A"}}>
-                                                        <li style={{fontSize:"16px", fontWeight:"700", marginBottom:"8px", color:"#333333"}}>Tiffany</li>
+                                                        <li style={{fontSize:"16px", fontWeight:"700", marginBottom:"8px", color:"#333333"}}>Le Chi Cuong</li>
                                                         <li style={{marginBottom:"8px"}}>Vin University</li>
                                                         <li style={{marginBottom:"8px"}}>Lập trình C++</li>
-                                                        <li style={{marginBottom:"8px"}}>Hi, I Am Edison Max, a graduate student
+                                                        <li style={{marginBottom:"8px"}}>Hi, I Am Cuong, a graduate student
                                                             from the Vin University...</li>
                                                     </ul>
                                                     <div style={{width:"151px"}}>
                                                         <p className="" style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>12$</p>
-                                                        <Button href="/tutor-description" className="w-100 d-flex align-items-center justify-content-center" type="submit"
+                                                        <Button href="/tutor2" className="w-100 d-flex align-items-center justify-content-center" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
@@ -302,16 +303,16 @@ export default function Study11() {
                                                         fontWeight:"500",
                                                         padding:"0",
                                                         marginRight:"43px", color:"#5A5A5A"}}>
-                                                        <li style={{fontSize:"16px", fontWeight:"700", marginBottom:"8px", color:"#333333"}}>Casemiro</li>
+                                                        <li style={{fontSize:"16px", fontWeight:"700", marginBottom:"8px", color:"#333333"}}>Tran Duy Mai Anh</li>
                                                         <li style={{marginBottom:"8px"}}>Vin University</li>
                                                         <li style={{marginBottom:"8px"}}>Lập trình C++</li>
-                                                        <li style={{marginBottom:"8px"}}>Hi, I Am Edison Max, a graduate student
+                                                        <li style={{marginBottom:"8px"}}>Hi, I Am Mai Anh, a graduate student
                                                             from the Vin University...</li>
                                                     </ul>
                                                     <div style={{width:"151px"}}>
                                                         <p style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>12$</p>
                                                         <div className="d-flex align-items-center justify-content-center mb-4"><img src={star} alt=""/></div>
-                                                        <Button  href="/tutor-description" className="w-100 d-flex align-items-center justify-content-center" type="submit"
+                                                        <Button  href="/tutor3" className="w-100 d-flex align-items-center justify-content-center" type="submit"
                                                                 style={{
                                                                     borderRadius: "16px",
                                                                     borderStyle: "var(--button-borderStyle)",
@@ -327,9 +328,53 @@ export default function Study11() {
                                                     </div>
                                                 </Card.Body>
                                             </Card>
+                                            <Card style={{
+                                                marginTop: "40px",
+                                                width: "728px",
+                                                height: "260px",
+                                                background: "rgba(255, 255, 255, 0.5)",
+                                                boxShadow: "0px 2px 4px rgba(0, 187, 249, 0.25)",
+                                                borderRadius: "32px", borderStyle:"none"}}>
+                                                <Card.Body className="d-flex flex-row align-items-center justify-content-center">
+                                                    <img style={{width:"151px", height:"151px", marginRight:"40px"}} src={ProfileAvatar3} alt=""/>
+                                                    <ul style={{
+                                                        listStyle:"none",
+                                                        width:"279px",
+                                                        fontSize:"14px",
+                                                        fontWeight:"500",
+                                                        padding:"0",
+                                                        marginRight:"43px", color:"#5A5A5A"}}>
+                                                        <li style={{fontSize:"16px", fontWeight:"700", marginBottom:"8px", color:"#333333"}}>Thao Ly</li>
+                                                        <li style={{marginBottom:"8px"}}>Vin University</li>
+                                                        <li style={{marginBottom:"8px"}}>Lập trình C++</li>
+                                                        <li style={{marginBottom:"8px"}}>Hi, I Am Thao Ly, a graduate student
+                                                            from the Vin University...</li>
+                                                    </ul>
+                                                    <div style={{width:"151px"}}>
+                                                        <p style={{fontSize:"32px", color:"red", fontWeight:"600", textAlign:"center"}}>12$</p>
+                                                        <div className="d-flex align-items-center justify-content-center mb-4"><img src={star} alt=""/></div>
+                                                        <Button  href="/tutor4" className="w-100 d-flex align-items-center justify-content-center" type="submit"
+                                                                style={{
+                                                                    borderRadius: "16px",
+                                                                    borderStyle: "var(--button-borderStyle)",
+                                                                    margin: "var(--button-margin)",
+                                                                    height: "40px",
+                                                                    fontSize: "14px",
+                                                                    fontWeight: "600",
+                                                                    backgroundColor: "var(--button-backgroundColor)",
+                                                                    fontFamily: "var(--font-family)",
+                                                                    boxShadow: "var(--button-boxShadow)"}}>
+                                                            Xem gia sư
+                                                        </Button>
+                                                    </div>
+                                                </Card.Body>
+                                            </Card>
+                                            
                                         </div>
                                     </Card.Body>
+                                    
                             </Card>
+                            
                         </div>
                     </Row>
                 </Container>
