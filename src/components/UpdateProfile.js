@@ -139,7 +139,7 @@ export default function UpdateProfile() {
                                             fontSize:"var(--small-header-size)"}}></textarea>
                           </Form.Group>
                           <div className="w-100 text-center mb-3" style={{paddingTop:"43px"}}>
-                              <Button disabled={loading} className="w-100" type="submit"
+                              <Button disabled={loading} className="w-100" type="submit" href="landing-page"
                                       style={{
                                           borderRadius: "var(--button-borderRadius)",
                                           borderStyle: "var(--button-borderStyle)",
